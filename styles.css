@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.u-center {
+    text-align: center;
+}
+
+button {
+    width: 50%;
+}
+
+img {
+    width: 12%;
+}
