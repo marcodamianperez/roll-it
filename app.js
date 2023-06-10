@@ -2,18 +2,44 @@ const generateRandomNumber = () => {
     return Math.floor(Math.random() * (6 - 1 + 1)) + 1;
 }
 
-const render = () => {
+const render = (e, use2Dice) => {
+    e.preventDefault();
+    
+    if (use2Dice) {
+        const number1 = generateRandomNumber();
+        const number2 = generateRandomNumber();
+        
+        const imageDice1 = document.querySelector('#image-dice1');
+        const imageDice2 = document.querySelector('#image-dice2');
+        imageDice1.setAttribute('src', `./img/${number1}.svg`);
+        imageDice2.setAttribute('src', `./img/${number2}.svg`);
+        imageDice2.style.display = 'inline';
+        
+        const total = document.querySelector('#total');
+        total.textContent = number1 + number2;
+    } else {
+        const imageDice2 = document.querySelector('#image-dice2');
+        imageDice2.style.display = 'none';
+        const number = generateRandomNumber();
 
-    const number = generateRandomNumber();
-
-    const diceContainer = document.querySelector('#dice-container');
-    diceContainer.innerHTML = `
-    <img src="./img/${number}.svg" alt="dice number ${number}">
-    <figcaption>Total: ${number}</figcaption>
-    `;
+        const imageDice1 = document.querySelector('#image-dice1');
+        imageDice1.setAttribute('src', `./img/${number}.svg`);
+        const total = document.querySelector('#total');
+        total.textContent = number;
+    }
 }
 
-const btnRoll = document.querySelector('#btn-roll');
-
-btnRoll.addEventListener('click', render);
 window.addEventListener('DOMContentLoaded', render);
+
+const btnRoll = document.querySelector('#btn-roll');
+const checkbox = document.querySelector('#switch');
+
+checkbox.addEventListener('change', (e) => {
+    const use2Dice = checkbox.checked;
+    render(e, use2Dice);
+});
+
+btnRoll.addEventListener('click', (e) => {
+    const use2Dice = checkbox.checked;
+    render(e, use2Dice);
+});
