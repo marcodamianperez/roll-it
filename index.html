@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en' data-theme="dark">
+
+<head>
+
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Marco Pérez">
+    <meta name="description" content="Roll the dice!">
+    <meta name="keywords" content="roll, dice, rollit">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- SCRIPT -->
+    <script defer src="./app.js"></script>
+
+    <!-- OTHER -->
+    <title>Roll It!</title>
+</head>
+
+<body>
+    <main class="container u-center">
+        <section>
+
+            <div class="headings">
+                <h1>Welcome to Roll It!</h1>
+                <h2>Roll the dice and let the fun begin</h2>
+            </div>
+    
+            <figure id="dice-container">
+                <img id="image-dice1" src="./img/3.svg" alt="dice number">
+                <img id="image-dice2" src="./img/3.svg" alt="dice number" style="display: none;">
+                <figcaption>Total: <span id="total">3</span></figcaption>
+            </figure>
+    
+            <form>
+                <button role="button" id="btn-roll">Roll It!</button>
+                <fieldset>
+                    <label for="switch">
+                        <input type="checkbox" id="switch" name="switch" role="switch">
+                        Use 2 dice
+                    </label>
+                </fieldset>
+            </form>
+            
+        </section>
+    </main>
+
+    <footer class="u-center">Made with <a href="https://picocss.com/" target="_blank">Pico.css</a></footer>
+
+</body>
+
+</html>
