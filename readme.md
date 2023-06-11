@@ -1,8 +1,10 @@
+![Roll It!](https://i.imgur.com/xLagRzI.png)
+
 # Roll It!
 
 ## :memo: What is Roll It!?
 
-Roll It! is a minimalist online dice roller. It was built using the amazing [Pico CSS](https://picocss.com/) library and vanilla JavaScript. It features a random simulation of a dice roll and the posibility to add a second dice.
+Roll It! is a minimalist online dice roller. It was built using the amazing [Pico CSS](https://picocss.com/) library and vanilla JavaScript. It features a simulation of a random dice roll and the posibility to add a second dice.
 
 ## :question: Why did you make Roll It!?
 
